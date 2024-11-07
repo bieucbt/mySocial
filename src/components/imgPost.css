@@ -1,0 +1,5 @@
+
+
+.divImg{
+    grid-template-rows: repeat(2, 50%);
+}

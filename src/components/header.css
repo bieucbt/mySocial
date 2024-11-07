@@ -1,0 +1,58 @@
+
+
+header{
+   
+}
+
+header nav{
+    grid-template-rows: 40px;
+}
+
+header nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav a.active{
+    color: #0866ff;
+    border-bottom: 3px solid #0866ff;
+}
+
+header div:first-of-type svg{
+    animation: resizeIcon 0.7s 1 linear;
+}
+
+@keyframes resizeIcon{
+    to{
+        padding-left: 0;
+    }
+}
+
+header div:last-child div:not(:last-child){
+    background-color: rgb(122, 122, 122);
+    padding: 5px;
+    border-radius: 100%;
+}
+header div:last-child div{
+    flex-shrink: 0;
+}
+header div:last-child div svg{
+    color: white;
+}
+
+.hidden-icon{
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+
+header input{
+    transition: all 1s ease;
+}
+
+.groupSidebarLeft:hover .edit{
+    display: block;
+    transition: .5s;
+}

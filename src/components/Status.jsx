@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaVideo, FaImage, FaFaceSmileWink  } from "react-icons/fa6";
 import { userInfo } from '../data/user'
+import CreatPost from './CreatPost';
 
 const Status = () => {
     const cssStatus = `flex items-center gap-3 p-2 hover:bg-gray-400
           cursor-pointer rounded-xl duration-500 ease-linear transition-all`
+    const [showPost, setShowPost] = useState(false)
   return (
     <div className='py-2 px-5 mt-4 bg-white'>
+        <CreatPost showPost={showPost} setShowPost={setShowPost}  />
         <div className='flex items-center'>
           <img src={userInfo.avatar} alt="avatar user"
           className='rounded-full w-[50px] h-[50px] object-cover' />
           <div className='flex-1 border border-gray-300 h-full rounded-2xl
-          h-[35px] leading-[35px] pl-[10px] ml-2'>
+          h-[35px] leading-[35px] pl-[10px] ml-2 hover:bg-gray-200
+          duration-500 ease-linear cursor-pointer'
+          onClick={() => setShowPost(true)}>
             {userInfo.name} ơi, bạn đang nghĩ gì thế?
           </div>
         </div>

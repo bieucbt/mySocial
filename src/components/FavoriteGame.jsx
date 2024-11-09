@@ -51,14 +51,14 @@ const FavoriteGame = () => {
             }
             </div>
           </div>
-          <div className='absolute bottom-[50%] left-0 right-0 translate-y-[100%] flex'>
-              <button className={`${cssButton} ml-[-20px] ${hiddenButtonLeft && 'hidden'}`}
-              onClick={() => setIndex(index-1)}>
-                <IoIosArrowBack size={20} />
-              </button>
-              <button className={`${cssButton} ml-auto mr-[-20px] ${hiddenButtonRight && 'hidden'}`}
-              onClick={() => setIndex(index+1)}><IoIosArrowForward /></button>
-          </div>
+            <button className={`${cssButton} ml-[-20px] ${hiddenButtonLeft && 'hidden'}
+            absolute bottom-[50%] left-0 translate-y-[50%]`}
+            onClick={() => setIndex(index-1)}>
+              <IoIosArrowBack size={20} />
+            </button>
+            <button className={`${cssButton} ml-auto mr-[-20px] ${hiddenButtonRight && 'hidden'}
+            absolute bottom-[50%] right-0 translate-y-[50%]`}
+            onClick={() => setIndex(index+1)}><IoIosArrowForward /></button>
       </div>
   )
 }

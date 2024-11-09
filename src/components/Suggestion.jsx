@@ -9,7 +9,7 @@ const Suggestion = ({data}) => {
     <div className='rounded-md flex flex-col rounded-xl overflow-hidden
     bg-white'>
         <img src={data.img} alt="suggestion img"
-        className='w-full h-[60%] object-cover' />
+        className='w-full h-[60%] object-cover cursor-pointer' />
         <div className='flex-1 flex flex-col p-2 '>
             <h3 className='font-bold'>{data.name}</h3>
             <div className='flex-1 flex flex-col justify-end gap-2'>

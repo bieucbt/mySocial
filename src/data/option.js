@@ -14,7 +14,7 @@ export const friendsOption = {
 title: 'Friends',
 icon: IoMdSettings,    
 linkSidebar: [
-    {icon: FaUserFriends, name: 'Trang chủ', path: '/friends'},
+    {icon: FaUserFriends, name: 'Trang chủ', path: 'friends'},
     {icon: IoIosPersonAdd, name: 'Lời mời kết bạn', path: 'birthday'},
     {icon: IoPersonAddSharp, name: 'Gợi ý kết bạn', path: 'birthday'},
     {icon: MdCopyAll, name: 'tất cả bạn bè', path: 'birthday'},

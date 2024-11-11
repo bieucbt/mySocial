@@ -16,12 +16,12 @@ const SideBarLeft = () => {
     left-0  h-screen pt-[10px] px-[8px] overflow-hidden
     hover:overflow-y-scroll bg-white pb-[70px] '>
         <nav>
-          <Link to='/friends' className={cssLi} >
+          <div className={cssLi} >
             <img src={userInfo.avatar} alt="img user"
             className='w-[25px] h-[25px] object-cover
             rounded-full' />
             <span>{userInfo.name}</span>
-          </Link>
+          </div>
           <List data={linksSideBarLeft} type={1} />
           <div className={cssLi}>
               <IoIosArrowDropdown size={25} />

@@ -17,7 +17,8 @@ const ShortCut = () => {
             className='relative w-[32%] h-[250px] rounded-2xl
             overflow-hidden border shrink-0'>
                 <img src={userInfo.avatar} alt="img user"
-                className='w-full h-full object-cover' />
+                className='w-full h-full object-cover hover:scale-110
+                duration-500 ease-linear cursor-pointer' />
                 <div className='absolute bottom-0 left-0 w-full h-[50px] z-10
                 bg-white flex items-end justify-center pb-[10px]'>
                     <div className='absolute top-[-15px] left-[50%] translate-x-[-50%]

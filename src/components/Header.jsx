@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className='sticky top-0 w-full flex items-center 
-    px-[16px] py-[8px] gap-3 bg-white z-50 border border-solid
+    pr-[16px] py-[8px] gap-3 bg-white z-50 border border-solid
     border-gray-400'>
         <HeaderLeft />
         <NavHeader />

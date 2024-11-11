@@ -9,8 +9,8 @@ import {avatar1} from '../assets/'
 
 const CreatPost = ({showPost, setShowPost}) => {
   return (
-    <div className={`${!showPost && 'hidden'} absolute inset-0  duration-700 ease-linear
-    z-50`}>
+    <div className={`${!showPost && 'hidden'} fixed inset-0  duration-700 ease-linear
+    z-50 animation-fadein`}>
         <div className=' bg-black  opacity-90 absolute inset-0 z-50 duration-700 ease-linear'></div>
         <div className='w-[40%] m-auto mt-[10%] relative z-[100] bg-gray-800
         text-white p-3 rounded-xl'>

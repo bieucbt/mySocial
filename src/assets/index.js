@@ -51,7 +51,10 @@ import game19 from './img/games/game19.jpg'
 import game20 from './img/games/game20.jpg'
 
 export {
-    car1, car2, car3, car4, car5, car6, car7, car8, car9,
+    car1, car2, car3, car4, car5, car6, car7, car8, car9
+}
+
+export {
     avatar1, avatar2, avatar3, avatar4, avatar5, avatar6,
     avatar7, avatar8, avatar9, avatar10, avatar11, avatar12
 }

@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Birthday from './pages/Birthday'
 
 function App() {
+  
   return (
     <Router>
       <div >

@@ -1,69 +1,55 @@
-
-
-header{
-   
+header {
 }
 
-header nav{
-    grid-template-rows: 40px;
+header > nav {
+  grid-template-rows: 40px;
 }
 
 /* header div:last-child */
 
-header>div:last-child>div:not(:last-child){
-    background-color: rgb(122, 122, 122);
-    padding: 5px;
-    border-radius: 100%;
-}
-header div:last-child div{
-    flex-shrink: 0;
-}
-header div:last-child div svg{
-    color: white;
+header > div:last-child > div {
+  flex-shrink: 0;
 }
 
-.hidden-icon{
-    transform: translateX(-10px);
-    opacity: 0;
-    transition: all .5s ease;
+.hidden-icon {
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
-
-.groupSidebarLeft:hover .edit{
-    display: block;
-    transition: .5s;
+.groupSidebarLeft:hover .edit {
+  display: block;
+  transition: 0.5s;
 }
-
 
 /* animation-icon-move */
 
-.animationParentMove{
-    animation: animationParentMove .5s 1 linear forwards;
+.animationParentMove {
+  animation: animationParentMove 0.5s 1 linear forwards;
 }
 
-.animationArrowMove{
-    padding-left: 20px;
-    animation: turnLeft .5s 1 linear forwards;
+.animationArrowMove {
+  padding-left: 20px;
+  animation: turnLeft 0.5s 1 linear forwards;
 }
 
-.animaiton-height-dataSearch{
-    animation: heightDataSearch .3s 1 linear forwards;
+.animaiton-height-dataSearch {
+  animation: heightDataSearch 0.3s 1 linear forwards;
 }
 
-@keyframes animationParentMove{
-    to{
-        width: initial;
-    }
+@keyframes animationParentMove {
+  to {
+    width: initial;
+  }
 }
-@keyframes turnLeft{
-    to{
-        padding: 0;
-    }
-}
-
-@keyframes heightDataSearch{
-    to{
-        height: auto;
-    }
+@keyframes turnLeft {
+  to {
+    padding: 0;
+  }
 }
 
+@keyframes heightDataSearch {
+  to {
+    height: auto;
+  }
+}

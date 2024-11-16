@@ -4,11 +4,11 @@ import {GoVideo} from 'react-icons/go'
 
 
 export const navLinks = [
-    {icon: FaHome , href: 'mySocial/'},
-    {icon: FaUserFriends , href: 'friends'},
-    {icon: GoVideo , href: 'video'},
-    {icon: HiOutlineUserGroup , href: 'group'},
-    {icon: FaGamepad , href: 'games'},
+    {icon: FaHome ,title: 'Trang chủ' ,href: 'mySocial/'},
+    {icon: FaUserFriends ,title: 'bạn bè' ,href: 'friends'},
+    {icon: GoVideo ,title: 'video' ,href: 'video'},
+    {icon: HiOutlineUserGroup ,title: 'nhóm' ,href: 'group'},
+    {icon: FaGamepad ,title: 'chơi game' ,href: 'games'},
 ]
 
 

@@ -8,7 +8,7 @@ const List = ({data, type}) => {
             {
                 data.map((item, i)=> <li key={i}
                 className='flex items-center gap-2
-                inline-block hover:bg-gray-400 cursor-pointer
+                inline-block hover:bg-gray-200 cursor-pointer
                 w-full px-1 py-2 rounded-md'>
                     {
                         type == 1 ? <item.img size={20} /> :

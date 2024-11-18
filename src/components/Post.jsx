@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { PiGlobeLight } from "react-icons/pi";
 import { AiFillLike } from "react-icons/ai";
 import { RiMessage3Line } from "react-icons/ri";
 import { FaShare } from "react-icons/fa";
-import UserComent from './UserComent';
 import ImgPost from './ImgPost';
 
 const Post = ({post}) => {
+  const [showPostMore, setShowPostMore] = useState(false)
   const groupImg = !post.imgGroup
   const groupName = !post.groupName
-  
+  const btncss = `flex-1 flex items-center gap-2 cursor-pointer justify-center
+          hover:bg-gray-200 py-1`
   return (
-    <div className='p-2 first-of-type:mt-0 mt-3 rounded-lg bg-white '>
+    <div className='p-2 first-of-type:mt-0 mt-3 rounded-lg bg-white  '>
         <div className='flex items-center gap-2'>
           <div className='relative w-[50px] h-[50px]'>
             <img src={post.imgGroup} alt="img group"
@@ -50,22 +51,19 @@ const Post = ({post}) => {
         </div>
         <div className='flex items-center border-t border-b border-gray-300
         py-2 justify-evenly'>
-          <div className='flex items-center gap-2 cursor-pointer'>
-            <AiFillLike />
+          <div className={btncss}>
+            <AiFillLike size={20} />
             <span>Thích</span>
           </div>
-          <div className='flex items-center gap-2 cursor-pointer'>
-            <RiMessage3Line />
+          <div className={btncss}
+          onClick={() => setShowPostMore(true)}>
+            <RiMessage3Line size={20} />
             <span>Bình luận</span>
           </div>
-          <div className='flex items-center gap-2 cursor-pointer'>
-            <FaShare />
+          <div className={btncss}>
+            <FaShare size={20} />
             <span>Chia sẻ</span>
           </div>
-        </div>
-        <div>
-          <p className='cursor-pointer'>xem thêm bình luận </p>
-          <UserComent />
         </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, {  useState } from 'react'
 import { FaTimes, FaUserTag } from "react-icons/fa";
 import { FaLocationDot, FaLock, FaRegFaceSmile } from "react-icons/fa6";
 import { MdOutlineInsertEmoticon } from "react-icons/md";
@@ -35,9 +35,9 @@ const CreatPost = ({showPost, setShowPost}) => {
                     </p>
                 </div>
             </div>
-            <textarea className='resize-none w-full outline-none mt-4
-            h-[100px] text-[20px]'
-            placeholder='john wick ơi, bạn đang nghĩ gì thế?'
+            <textarea className={`resize-none w-full outline-none mt-4
+            h-[100px] ${widthTexera.length > 50 ? 'text-[16px] h-[130px]' : 'text-[20px]'}`}
+            placeholder={`${widthTexera}'john wick ơi, bạn đang nghĩ gì thế?'`}
             onKeyUp={(e) => setWidthTexera(e.target.value)}></textarea>
             <div className='flex items-center justify-between my-3'>
                 <span>color</span>

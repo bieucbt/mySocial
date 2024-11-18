@@ -2,7 +2,7 @@ import React from 'react'
 import './imgPost.css'
 
 const ImgPost = ({data}) => {
-    let cssImg = ' w-full h-full object-cover'
+    let cssImg = ' w-full h-full object-cover cursor-pointer'
     let cssDiv = 'grid-cols-2 '
    if(data.length == 1){ 
         cssImg='w-full col-span-2'

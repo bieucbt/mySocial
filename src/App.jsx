@@ -6,14 +6,12 @@ import Group from './pages/Group'
 import Games from './pages/Games'
 import Home from './pages/Home'
 import Birthday from './pages/Birthday'
-import Test from './components/Test';
 
 function App() {
   
   return (
     <Router>
-      <Test />
-      {/* <div >
+      <div >
         <Header />
         <main >
           <Routes>
@@ -26,7 +24,7 @@ function App() {
             <Route path='games' element={<Games />} />
           </Routes>
         </main>
-      </div> */}
+      </div>
     </Router>
   )
 }

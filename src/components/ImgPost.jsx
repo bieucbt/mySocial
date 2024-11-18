@@ -23,8 +23,7 @@ const ImgPost = ({data}) => {
             ${i==0 && data.length==2 && 'row-span-2' || ''} 
             ${i==1 && data.length==2 && 'row-span-2' || ''} 
             ${i==0 && data.length==3 && 'row-span-2 h-full' || ''} 
-            ${i==0 && data.length==5 && 'col-span-3' || ''}
-            ${i==1 && data.length==5 && 'col-span-3' || ''}
+            ${(i==0 || i==1 )&& data.length==5 && 'col-span-3' || ''}
             ${i>1 && data.length==5 && 'col-span-2' || ''}
             ${data.length==4 && 'object-contain' || ''}
             ${cssImg}`} />)

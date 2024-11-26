@@ -23,14 +23,15 @@ const HeaderRight = () => {
   
   function activeInfo(e,key){
     e && e.stopPropagation()
-    setHide(prev => {return {menu: false, mess: false, noti: false, user: false}})
+    setHide({menu: false, mess: false, noti: false, user: false})
     hide[key] && hide[key] == true ?
       setHide(prev => {return {...prev,[key]: false}}) :
       setHide(prev => {return {...prev,[key]: true}})
   }
   const css = `w-[40px] h-[40px] flex items-center justify-center rounded-full p-1 `
   return (
-    <div ref={headerRightRef} className="flex-1 flex items-center gap-3 justify-end relative">
+    <div ref={headerRightRef} className="flex-1 flex items-center gap-3 
+    justify-end relative bg-white">
         <div className={`${css} ${hide.menu ? 'bg-blue-200' : 'bg-gray-200'}`}
         title='menu'>
             <CgMenuGridO size={25} className={` cursor-pointer ${hide.menu ? 'text-blue-500' : ''}`}

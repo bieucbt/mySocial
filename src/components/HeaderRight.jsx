@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { CgMenuGridO } from "react-icons/cg";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { IoMdNotifications } from "react-icons/io";
@@ -11,6 +11,7 @@ import HeaderRightUser from './HeaderRightUser';
 const HeaderRight = () => {
   const [hide, setHide] = useState({menu: false, mess: false, noti: false, user: false})
   const headerRightRef = useRef(null)
+  
   useEffect(() => {
     function clickOut(e){
       if(!headerRightRef.current.contains(e.target) ){
@@ -19,8 +20,7 @@ const HeaderRight = () => {
     }
     document.addEventListener('click', clickOut )
     return () => document.removeEventListener('click', clickOut)
-  }, [])
-  
+  }, [hide])
   function activeInfo(e,key){
     e && e.stopPropagation()
     setHide({menu: false, mess: false, noti: false, user: false})

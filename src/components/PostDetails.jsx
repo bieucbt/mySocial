@@ -6,6 +6,7 @@ import { MdOutlineZoomOutMap, MdKeyboardArrowRight, MdKeyboardArrowLeft  } from 
 import { AiFillLike } from "react-icons/ai";
 import PostHeader from './PostHeader';
 import PostOption from './PostOption';
+import UserTypeComment from './UserTypeComment';
 
 const PostDetails = ({data, setShowPostDetail}) => {
   const [index, setIndex] = useState(0)
@@ -59,6 +60,9 @@ const PostDetails = ({data, setShowPostDetail}) => {
         <PostHeader post={data} />
         <p className='mt-3 text-[12px]'>{data.caption}</p>
         <PostOption post={data} hiddenText={true} />
+        <div>
+          <UserTypeComment />
+        </div>
       </div>
     </div>
   )

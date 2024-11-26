@@ -3,13 +3,14 @@ import ImgPost from './ImgPost';
 import PostDetails from './PostDetails';
 import PostHeader from './PostHeader';
 import PostOption from './PostOption';
+import PostVideo from './PostVideo';
 
 const Post = ({post}) => {
   const [showPostDetail, setShowPostDetail] = useState(false)
  
   return (
     <div className='p-2 first-of-type:mt-0 mt-3 rounded-lg bg-white '
-    onClick={() => setShowPostDetail(true)}>
+    onClick={() => setShowPostDetail(false)}>
         {
           showPostDetail && <PostDetails data={post} setShowPostDetail={setShowPostDetail} />
         }
@@ -18,9 +19,7 @@ const Post = ({post}) => {
           {post.caption}
         </div>
         <div>
-          {post.video ? <video controls >
-            <source src={post.video} type='video/mp4' />
-          </video>:<ImgPost data={post.imgs} />}
+          {post.video ? <PostVideo post={post} /> :<ImgPost data={post.imgs} />}
         </div>
         <PostOption post={post} />
     </div>

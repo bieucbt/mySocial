@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom'
 const Sidebar = ({data}) => {
   const [active, setActive] = useState(0)
   return (
-    <div className='w-[30%] h-full bg-gray-400 fixed p-3'>
+    <div className='w-[30%] h-full bg-white fixed p-3'>
         <div className='flex justify-between'>
             <h3 className='text-[25px] font-bold'>{data.title}</h3>
-            <div className='bg-gray-500 rounded-full p-2'>
+            <div className='bg-gray-500 rounded-full p-2 cursor-pointer'>
                 <data.icon size={25} color='white' />
             </div>
         </div>
         {
-          data.placeholder && <div className='flex items-center bg-white 
+          data.placeholder && <div className='flex items-center bg-gray-200 
           rounded-3xl overflow-hidden relative p-2 my-4'>
             <FaSearch className="" />
             <input type="text" placeholder={data.placeholder}
             className='border-none w-full h-full outline-none
-            pl-2' />
+            pl-2 bg-transparent' />
         </div>
         }
         

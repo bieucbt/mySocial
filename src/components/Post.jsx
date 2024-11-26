@@ -10,7 +10,10 @@ const Post = ({post}) => {
  
   return (
     <div className='p-2 first-of-type:mt-0 mt-3 rounded-lg bg-white '
-    onClick={() => setShowPostDetail(false)}>
+    onClick={() => {
+      if(!post.video)
+      setShowPostDetail(true)
+      }}>
         {
           showPostDetail && <PostDetails data={post} setShowPostDetail={setShowPostDetail} />
         }

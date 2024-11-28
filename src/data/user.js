@@ -7,7 +7,7 @@ import {
 
 export const userInfo = {
     avatar: car1,
-    name: 'Mr.John'
+    name: 'Nguyễn Tiên'
 }
 
 export const groupsUser = [

@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const Sidebar = ({data}) => {
-  const [active, setActive] = useState(0)
+const Sidebar = ({data, setCurrentPage, currentPage}) => {
   return (
     <div className='w-[30%] h-full bg-white fixed p-3'>
         <div className='flex justify-between'>
@@ -12,6 +11,8 @@ const Sidebar = ({data}) => {
                 <data.icon size={25} color='white' />
             </div>
         </div>
+
+        {/* search sidebar */}
         {
           data.placeholder && <div className='flex items-center bg-gray-200 
           rounded-3xl overflow-hidden relative p-2 my-4'>
@@ -22,16 +23,17 @@ const Sidebar = ({data}) => {
         </div>
         }
         
+        {/* link option */}
         <div>
           {
             data.linkSidebar.map((link, i) => <div key={i}
-            className={`${i==active && 'bg-blue-300'} flex items-center gap-2
+            className={`${i==currentPage && 'bg-blue-300'} flex items-center gap-2
             hover:bg-blue-300 cursor-pointer flex items-center p-2 rounded-md`}
-            onClick={() => setActive(i)}>
-              <div className={`rounded-full p-2  ${i==active ? 'bg-blue-600' : 'bg-gray-600'}`}>
+            onClick={() => setCurrentPage(i)}>
+              <div className={`rounded-full p-2  ${i==currentPage ? 'bg-blue-600' : 'bg-gray-600'}`}>
                 <link.icon size={25} color='white' />
               </div>
-              <Link to={link.path}>{link.name}</Link>
+              <span>{link.name}</span>
             </div>)
           }
         </div>

@@ -14,12 +14,12 @@ export const friendsOption = {
 title: 'Friends',
 icon: IoMdSettings,    
 linkSidebar: [
-    {icon: FaUserFriends, name: 'Trang chủ', path: 'friends'},
-    {icon: IoIosPersonAdd, name: 'Lời mời kết bạn', path: 'birthday'},
-    {icon: IoPersonAddSharp, name: 'Gợi ý kết bạn', path: 'birthday'},
-    {icon: MdCopyAll, name: 'tất cả bạn bè', path: 'birthday'},
-    {icon: FaGift, name: 'Sinh nhật', path: 'birthday'},
-    {icon: SlOptionsVertical, name: 'Danh sách tùy chỉnh', path: 'birthday'}
+    {icon: FaUserFriends, name: 'Trang chủ'},
+    {icon: IoIosPersonAdd, name: 'Lời mời kết bạn'},
+    {icon: IoPersonAddSharp, name: 'Gợi ý kết bạn'},
+    {icon: MdCopyAll, name: 'tất cả bạn bè'},
+    {icon: FaGift, name: 'Sinh nhật'},
+    {icon: SlOptionsVertical, name: 'Danh sách tùy chỉnh'}
 ]}
 
 export const videosOption = {

@@ -49,6 +49,19 @@ import game17 from './img/games/game17.jpg'
 import game18 from './img/games/game18.jpg'
 import game19 from './img/games/game19.jpg'
 import game20 from './img/games/game20.jpg'
+import show1 from './img/show/show1.jpg'
+import show2 from './img/show/show2.jpg'
+import show3 from './img/show/show3.jpg'
+import show4 from './img/show/show4.jpg'
+import show5 from './img/show/show5.jpg'
+import show6 from './img/show/show6.jpg'
+import show7 from './img/show/show7.jpg'
+import show8 from './img/show/show8.jpg'
+import show9 from './img/show/show9.jpg'
+import show10 from './img/show/show10.jpg'
+import watchListEmpty from './img/show/watchlistEmpty.png'
+import notification from './img/show/notification.webp'
+
 
 export {
     car1, car2, car3, car4, car5, car6, car7, car8, car9
@@ -67,4 +80,9 @@ export {
 export {
     game1,game10,game11,game12,game13,game14,game15,game16,game17,game18,game19,
     game2,game20,game3,game4,game5,game6,game7,game8,game9
+}
+
+export {
+    show1, show10, show2, show3, show4, show5, show6,show7, show8, show9,
+    watchListEmpty, notification
 }

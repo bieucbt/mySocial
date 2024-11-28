@@ -1,23 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar'
-import { dataFriends } from '../data/user'
-import Suggestion from '../components/Suggestion'
 import { friendsOption } from '../data/option'
+import FriendPage1 from '../components/FriendPage1'
+import FriendPage2 from '../components/FriendPage2'
+import FriendPage3 from '../components/FriendPage3'
+import FriendPage4 from '../components/FriendPage4'
+import FriendPage5 from '../components/FriendPage5'
+import FriendPage6 from '../components/FriendPage6'
 const Friends = () => {
+  const [currentPage, setCurrentPage] = useState(0)
+
+  const pages = [
+    <FriendPage1 />,
+    <FriendPage2 />,
+    <FriendPage3 />,
+    <FriendPage4 />,
+    <FriendPage5 />,
+    <FriendPage6 />,
+  ];
   return (
     <div>
-      <Sidebar data={friendsOption} />
+      <Sidebar data={friendsOption} setCurrentPage={setCurrentPage} 
+      currentPage={currentPage} />
       <div className='ml-[30%] p-4 '>
-          <div className='flex items-center justify-between
-          mb-3'>
-            <h3 className='text-[25px] font-bold'>Những người bạn có thể biết</h3>
-            <span className='text-blue-400 cursor-pointer'>xem tất cả</span>
-          </div>
-        <div className='grid grid-cols-4 gap-2'>
-          {
-            dataFriends.map((friend, i) => <Suggestion key={i} data={friend} />)
-          }
-        </div>
+        {
+          pages[currentPage]
+        }
       </div>
     </div>
   )

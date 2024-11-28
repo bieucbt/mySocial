@@ -1,18 +1,30 @@
-import React from 'react'
-import { postDataVideo } from '../data/post';
-import Post from './../components/Post';
+import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar';
 import { videosOption } from '../data/option';
+import VideoPage1 from './../components/VideoPage1';
+import VideoPage2 from './../components/VideoPage2';
+import VideoPage3 from './../components/VideoPage3';
+import VideoPage4 from './../components/VideoPage4';
+import VideoPage5 from './../components/VideoPage5';
+import VideoPage6 from './../components/VideoPage6';
 
 
 const Video = () => {
+  const [currentPage, setCurrentPage] = useState(0)
+  const pages = [
+    <VideoPage1 />,
+    <VideoPage2 />,
+    <VideoPage3 />,
+    <VideoPage4 />,
+    <VideoPage5 />,
+    <VideoPage6 />,
+  ]
   return (
     <div className='flex'>
-      <Sidebar data={videosOption} />
+      <Sidebar data={videosOption} currentPage={currentPage} 
+      setCurrentPage={setCurrentPage} />
       <div className='flex-1 ml-[30%] px-[5%]'>
-        {
-          postDataVideo.map((video, i) => <Post key={i} post={video} />)
-        }         
+        {pages[currentPage]} 
       </div>
     </div>
   )

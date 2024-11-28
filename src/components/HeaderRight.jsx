@@ -7,6 +7,7 @@ import Menu from './Menu';
 import HeaderRightMess from './HeaderRightMess';
 import HeaderRightNoti from './HeaderRightNoti';
 import HeaderRightUser from './HeaderRightUser';
+import Avatar from './Avatar';
 
 const HeaderRight = () => {
   const [hide, setHide] = useState({menu: false, mess: false, noti: false, user: false})
@@ -50,11 +51,8 @@ const HeaderRight = () => {
           color={hide.noti ? 'blue' : ''}/>
           <HeaderRightNoti show={hide.noti} />
         </div>
-        <div>
-          <img src={userInfo.avatar} 
-          alt="" className="w-[40px] h-[40px] object-cover rounded-full
-          cursor-pointer" 
-          onClick={(e) => activeInfo(e,'user')}/>
+        <div onClick={(e) => activeInfo(e,'user')}>
+          <Avatar link={userInfo.avatar} />
           <HeaderRightUser show={hide.user} />
         </div>
     </div>

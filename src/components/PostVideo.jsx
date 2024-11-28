@@ -5,11 +5,13 @@ import { MdOutlineZoomOutMap } from "react-icons/md";
 import { ImVolumeMute, ImVolumeMute2  } from "react-icons/im";
 
 const PostVideo = ({post}) => {
-  const [progress, setProgress] = useState(0);
-  const [currentTime, setCurrentTime] = useState(0)
+  const [progress, setProgress] = useState(1);
+  const [currentTime, setCurrentTime] = useState(1)
   const [play, setPlay] = useState(false)
   const [muted, setMuted] = useState(false)
+  const [volume, setVolume] = useState(null)
   const videoRef = useRef(null)
+  const [changeRangeValume, setChangeRangeValume] = useState(false)
 
   const handleSliderChange = (e) => {
     const time = (e.target.value / 100) * videoRef.current.duration;
@@ -36,6 +38,16 @@ const PostVideo = ({post}) => {
     videoRef.current.pause()
     setPlay(false)
   }
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    if(muted) {
+      videoRef.current.muted = false
+      setMuted(false)
+    }
+    setVolume(newVolume); 
+    videoRef.current.volume = newVolume; 
+  };
 
   function handleMute(){
     videoRef.current.muted = false
@@ -76,14 +88,27 @@ const PostVideo = ({post}) => {
         className='cursor-pointer'/> : <FaPlay onClick={handlePlay}
         className='cursor-pointer' />}
         <span>{formatTime(currentTime)}</span> 
-        <input type="range" className='flex-1' value={progress}
+        <input type="range" className='flex-1 accent-blue-600 h-1 cursor-pointer' value={progress}
         onChange={(e) => handleSliderChange(e)} />
         <IoMdSettings className='cursor-pointer' />
         <MdOutlineZoomOutMap className='cursor-pointer' />
-        {muted ? <ImVolumeMute2 className='cursor-pointer'
-        onClick={handleMute} /> :  
-        <ImVolumeMute className='cursor-pointer'
-        onClick={handleMute2} />}
+        <div className='relative '
+        onMouseEnter={() => setChangeRangeValume(true)}
+        onMouseLeave={() => setChangeRangeValume(false)}>
+          <div className={`changeVolume absolute top-[-271%] left-[-177%] ${changeRangeValume ? '' : 'hidden'}`}>
+            <input type='range' min={0} max={1} step={0.01}
+            value={volume} onChange={handleVolumeChange}
+            className=' -rotate-90 h-3 w-[65px] accent-blue-600
+            cursor-pointer' />
+          </div>
+          <div className='volumeVideo'>
+            {muted ? <ImVolumeMute2 className='cursor-pointer'
+            onClick={handleMute}  /> :  
+            <ImVolumeMute className='cursor-pointer'
+            onClick={handleMute2} />}
+          </div>
+          
+        </div>
       </div>
     </div>
     

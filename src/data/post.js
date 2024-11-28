@@ -69,7 +69,6 @@ export const postDataVideo = [
     {
         nameUser: 'Mai Hoàng',
         avatar: avatar12,
-        
         time: '12h',
         video: video1,
         caption: 'siêu cute',
@@ -79,7 +78,7 @@ export const postDataVideo = [
     {
         nameUser: 'Ngọc anh',
         avatar: avatar1,
-        
+        id: 2,
         time: '1h',
         video: video4,
         caption: 'siêu cute',

@@ -7,7 +7,7 @@ import PostVideo from './PostVideo';
 
 const Post = ({post}) => {
   const [showPostDetail, setShowPostDetail] = useState(false)
- 
+
   return (
     <div className='p-2 first-of-type:mt-0 mt-3 rounded-lg bg-white '
     onClick={() => {

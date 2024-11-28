@@ -13,6 +13,7 @@ const PostVideo = ({post}) => {
   const videoRef = useRef(null)
   const [changeRangeValume, setChangeRangeValume] = useState(false)
 
+
   const handleSliderChange = (e) => {
     const time = (e.target.value / 100) * videoRef.current.duration;
     videoRef.current.currentTime = time;
@@ -62,6 +63,16 @@ const PostVideo = ({post}) => {
 
   useEffect(() => {
     const video = videoRef.current
+    
+    
+    const winScroll = window.addEventListener('scroll', () => {
+        const videoRect = video.getBoundingClientRect()
+        if(videoRect.top <= 400) handlePlay()
+        if(videoRect.bottom <= 200 || videoRect.top >= 400) handlePause()
+       
+      
+    })
+
     const updateProgress = () => {
       const currentTime = video.currentTime;
       const duration = video.duration;
@@ -73,6 +84,7 @@ const PostVideo = ({post}) => {
 
     return () => {
       video.removeEventListener('timeupdate', updateProgress);
+      window.removeEventListener('scroll', winScroll)
     };
   }, [])
  
@@ -89,7 +101,7 @@ const PostVideo = ({post}) => {
         className='cursor-pointer' />}
         <span>{formatTime(currentTime)}</span> 
         <input type="range" className='flex-1 accent-blue-600 h-1 cursor-pointer' value={progress}
-        onChange={(e) => handleSliderChange(e)} />
+        onChange={handleSliderChange} />
         <IoMdSettings className='cursor-pointer' />
         <MdOutlineZoomOutMap className='cursor-pointer' />
         <div className='relative '

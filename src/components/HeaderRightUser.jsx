@@ -4,7 +4,7 @@ import { CgArrowsExchangeAlt } from "react-icons/cg";
 import { dataHeaderUser } from '../data/dataHeaderUser';
 import { useNavigate } from 'react-router-dom';
 
-const HeaderRightUser = ({show}) => {
+const HeaderRightUser = ({show, setHide}) => {
   const navigate = useNavigate()
   return (
     <div className={`absolute top-full right-0 min-w-[440px] bg-white 
@@ -14,7 +14,9 @@ const HeaderRightUser = ({show}) => {
         <div className='shadow-2xl p-1 rounded-xl'>
           <div className='flex items-center gap-3 hover:bg-gray-300 rounded-xl
           p-2 cursor-pointer'
-          onClick={() => navigate('profile')}>
+          onClick={() => {navigate('mySocial/profile')
+            setHide(false)
+          }}>
             <div className='w-10 h-10'><img src={userInfo.avatar} alt="avtar" 
               className='w-full h-full rounded-full' /></div>
             <p className='font-bold text-[20px]'>{userInfo.name}</p>

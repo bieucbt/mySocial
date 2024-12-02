@@ -53,7 +53,7 @@ const HeaderRight = () => {
         </div>
         <div onClick={(e) => activeInfo(e, 4)}>
           <Avatar link={userInfo.avatar}/>
-          <HeaderRightUser show={hide} />
+          <HeaderRightUser show={hide} setHide={setHide} />
         </div>
     </div>
   )

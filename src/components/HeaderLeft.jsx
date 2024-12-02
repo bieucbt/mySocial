@@ -34,7 +34,7 @@ const HeaderLeft = () => {
             onClick={() => setHidden(false)}><FaArrowLeft size={15} color="black"
             className="w-full animationArrowMove" /></div> :  
             <FaFacebook size={40} color="black" className="cursor-pointer" 
-            onClick={() => navigate('/')}/>
+            onClick={() => navigate('/mySocial')}/>
           }
         </div>
         <div className="relative border border-solid w-[200px] rounded-[30px] 

@@ -21,17 +21,17 @@ function App() {
         <Header />
         <main >
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='friends' element={<Friends />} />  
-            <Route path='friends/request' element={<Requests />} />
-            <Route path='friends/suggestions' element={<SuggestionsPage />} />
-            <Route path='friends/allfriend' element={<AllFriends />} />
-            <Route path='friends/friendCustom' element={<FriendCustomList />} />
-            <Route path='video' element={<Video />} />
-            <Route path='group' element={<Group />} />
-            <Route path='games' element={<Games />} />
-            <Route path='Profile' element={<Profile />} />
-            <Route path='reel' element={<Reels />} />
+            <Route path='/mySocial' element={<Home />} />
+            <Route path='mySocial/friends' element={<Friends />} />  
+            <Route path='mySocial/friends/request' element={<Requests />} />
+            <Route path='mySocial/friends/suggestions' element={<SuggestionsPage />} />
+            <Route path='mySocial/friends/allfriend' element={<AllFriends />} />
+            <Route path='mySocial/friends/friendCustom' element={<FriendCustomList />} />
+            <Route path='mySocial/video' element={<Video />} />
+            <Route path='mySocial/group' element={<Group />} />
+            <Route path='mySocial/games' element={<Games />} />
+            <Route path='mySocial/Profile' element={<Profile />} />
+            <Route path='mySocial/reel' element={<Reels />} />
           </Routes>
         </main>
       </div>

@@ -23,7 +23,7 @@ const Reels = () => {
       <div className='flex  text-white gap-3 flex-[2]'>
         <div className='self-start flex items-center gap-4'>
           <RxCross1 size={25} className='cursor-pointer' 
-          onClick={() => navigate('/video')}/>
+          onClick={() => navigate('/mySocial/video')}/>
           <h3 className='text-[24px] font-bold cursor-pointer hover:underline'>Reel</h3>
         </div>
       </div>

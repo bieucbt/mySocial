@@ -29,7 +29,7 @@ export const videosOption = {
     linkSidebar: [
         {icon: MdOndemandVideo, name: 'Trang chủ'},
         {icon: FaVideo , name: 'Trực tiếp'},
-        {icon: GoVideo , name: 'Reels', path: '/reel'},
+        {icon: GoVideo , name: 'Reels', path: '/mySocial/reel'},
         {icon: TfiVideoClapper, name: 'Chương trình'},
         {icon: BsRocketTakeoffFill, name: 'Khám trình'},
         {icon: IoSaveSharp , name: 'Video đã lưu'}

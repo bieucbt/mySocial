@@ -3,7 +3,10 @@ import Developer from './Developer'
 
 const GroupPage2 = () => {
   return (
-    <div><Developer /></div>
+    <div>
+      group2
+      <Developer />
+    </div>
   )
 }
 

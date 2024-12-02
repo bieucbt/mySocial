@@ -1,6 +1,6 @@
 import React from 'react'
 import {linksSideBarLeft} from '../data/linkSideBarLeft'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {groupsUser, userInfo} from '../data/user'
 import { IoIosArrowDropdown } from "react-icons/io";
 import './sidebar.css'
@@ -8,6 +8,7 @@ import List from './List';
 
 
 const SideBarLeft = () => {
+  const navigate = useNavigate()
   const cssLi = `flex items-center gap-2 inline-block
             w-full px-[4px] py-[8px] hover:bg-gray-400 rounded-md
             cursor-pointer transition-all duration-200 ease-linear`
@@ -16,7 +17,7 @@ const SideBarLeft = () => {
     left-0  h-screen pt-[10px] px-[8px] overflow-hidden
     hover:overflow-y-scroll bg-white pb-[70px] '>
         <nav>
-          <div className={cssLi} >
+          <div className={cssLi} onClick={() => navigate('/profile')}>
             <img src={userInfo.avatar} alt="img user"
             className='w-[25px] h-[25px] object-cover
             rounded-full' />

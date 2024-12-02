@@ -6,7 +6,7 @@ const HeaderRightNoti = ({show}) => {
   const [button, setButton] = useState(true)
   return (
     <div className={`absolute top-full right-0 min-w-[440px] bg-white 
-    p-5 rounded-2xl shadow-xl overflow-y-scroll h-[90vh] ${show ? '' : 'hidden'}`}>
+    p-5 rounded-2xl shadow-xl overflow-y-scroll h-[90vh] ${show == 3 ? '' : 'hidden'}`}>
         <div className='flex items-center justify-between '>
           <span className='text-[24px] font-bold'>Thông báo</span>
           <IoIosMore size={20} className='cursor-pointer' />

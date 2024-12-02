@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import SideBarOptionLink from './SideBarOptionLink'
 
 const Sidebar = ({data, setCurrentPage, currentPage}) => {
   return (
@@ -24,17 +25,10 @@ const Sidebar = ({data, setCurrentPage, currentPage}) => {
         }
         
         {/* link option */}
-        <div>
+        <div className='mt-5'>
           {
-            data.linkSidebar.map((link, i) => <div key={i}
-            className={`${i==currentPage && 'bg-blue-300'} flex items-center gap-2
-            hover:bg-blue-300 cursor-pointer flex items-center p-2 rounded-md`}
-            onClick={() => setCurrentPage(i)}>
-              <div className={`rounded-full p-2  ${i==currentPage ? 'bg-blue-600' : 'bg-gray-600'}`}>
-                <link.icon size={25} color='white' />
-              </div>
-              <span>{link.name}</span>
-            </div>)
+            data.linkSidebar.map((link, i) => <SideBarOptionLink key={i} link={link} 
+            setCurrentPage={setCurrentPage} currentPage={currentPage} num={i} />)
           }
         </div>
     </div>

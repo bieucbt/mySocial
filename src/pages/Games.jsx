@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Sidebar from './../components/Sidebar';
 import { GamesOption } from '../data/option';
-import GamePage1 from './../components/GamePage1';
-import GamePage2 from './../components/GamePage2';
+import GamePage1 from './../components/Gamepages/GamePage1';
+import GamePage2 from './../components/Gamepages/GamePage2';
 
 const Games = () => {
   const [currentPage, setCurrentPage] = useState(0)

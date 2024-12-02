@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import ImgPost from './ImgPost';
 import PostDetails from './PostDetails';
 import PostHeader from './PostHeader';
@@ -7,7 +7,11 @@ import PostVideo from './PostVideo';
 
 const Post = ({post}) => {
   const [showPostDetail, setShowPostDetail] = useState(false)
-
+  
+  useMemo(() => {
+      showPostDetail ? document.body.style.overflow = 'hidden' :
+      document.body.style.overflow = 'scroll'
+  }, [showPostDetail])
   return (
     <div className='p-2 first-of-type:mt-0 mt-3 rounded-lg bg-white '
     onClick={() => {
@@ -15,7 +19,8 @@ const Post = ({post}) => {
       setShowPostDetail(true)
       }}>
         {
-          showPostDetail && <PostDetails data={post} setShowPostDetail={setShowPostDetail} />
+          showPostDetail && <PostDetails data={post} setShowPostDetail={setShowPostDetail}
+          showPostDetail={showPostDetail} />
         }
         <PostHeader post={post} />
         <div className='py-3'>

@@ -10,7 +10,7 @@ const HeaderRightMess = ({show}) => {
   const [button, setButton] = useState(true)
   return (
     <div className={`absolute top-full right-0 min-w-[440px] bg-white
-    rounded-xl p-5 shadow-2xl h-[600px] overflow-hidden ${show ? '' : 'hidden'}`}>
+    rounded-xl p-5 shadow-2xl h-[600px] overflow-hidden ${show == 2 ? '' : 'hidden'}`}>
         <div className='flex items-center justify-between'>
           <span className='text-[24px] font-bold'>Đoạn chat</span>
           <div className='flex items-center gap-4'>

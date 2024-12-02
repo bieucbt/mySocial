@@ -6,23 +6,21 @@ import { useNavigate } from "react-router-dom";
 
 const HeaderLeft = () => {
   const [hidden, setHidden] = useState(false)
+  const navigate = useNavigate()
   const inputRef = useRef(null)
+
   useEffect(()=>{
     const handleClickOutside = (e) => {
       if (inputRef.current && inputRef.current.contains(e.target) && hidden != false) {
         setHidden(true)
-
       }else{
         setHidden(false);
-
       }
     };
-
     document.addEventListener('click', handleClickOutside)
 
     return () => document.removeEventListener('click', handleClickOutside)
   }, [hidden])
-
 
   return (
     <div className={`fixed w-[25%] top-0 pt-2 pb-1 max-w-[300px] pl-4
@@ -35,7 +33,8 @@ const HeaderLeft = () => {
             cursor-pointer duration-100 ease-linear"
             onClick={() => setHidden(false)}><FaArrowLeft size={15} color="black"
             className="w-full animationArrowMove" /></div> :  
-            <FaFacebook size={40} color="black" className="cursor-pointer" />
+            <FaFacebook size={40} color="black" className="cursor-pointer" 
+            onClick={() => navigate('/')}/>
           }
         </div>
         <div className="relative border border-solid w-[200px] rounded-[30px] 

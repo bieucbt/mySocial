@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import {FaTag, FaTimes, FaComment} from "react-icons/fa";
+import React, { useMemo, useState } from 'react'
+import {FaTag, FaTimes} from "react-icons/fa";
 import { LuZoomIn } from "react-icons/lu";
 import { FiZoomOut } from "react-icons/fi";
 import { MdOutlineZoomOutMap, MdKeyboardArrowRight, MdKeyboardArrowLeft  } from "react-icons/md";
-import { AiFillLike } from "react-icons/ai";
 import PostHeader from './PostHeader';
 import PostOption from './PostOption';
 import UserTypeComment from './UserTypeComment';
@@ -12,7 +11,7 @@ const PostDetails = ({data, setShowPostDetail}) => {
   const [index, setIndex] = useState(0)
   if(index < 0) setIndex(data.imgs.length-1)
   else if(index >= data.imgs.length) setIndex(0)
-  
+    
   return (
     <div className='fixed inset-0 z-[49]  flex items-center top-[58px]'>
       <div className='flex-[2] h-full absolute top-0 left-0 bg-black

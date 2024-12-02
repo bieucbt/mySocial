@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import Sidebar from '../components/Sidebar';
 import { videosOption } from '../data/option';
-import VideoPage1 from './../components/VideoPage1';
-import VideoPage2 from './../components/VideoPage2';
-import VideoPage3 from './../components/VideoPage3';
-import VideoPage4 from './../components/VideoPage4';
-import VideoPage5 from './../components/VideoPage5';
-import VideoPage6 from './../components/VideoPage6';
+import VideoPage1 from './../components/VideoPages/VideoPage1';
+import VideoPage2 from './../components/VideoPages/VideoPage2';
+import VideoPage3 from './../components/VideoPages/VideoPage3';
+import VideoPage4 from './../components/VideoPages/VideoPage4';
+import VideoPage5 from './../components/VideoPages/VideoPage5';
+import VideoPage6 from './../components/VideoPages/VideoPage6';
 
 
 const Video = () => {

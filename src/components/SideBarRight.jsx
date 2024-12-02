@@ -7,8 +7,8 @@ import { IoIosMore } from "react-icons/io";
 const SideBarRight = () => {
   return (
     <aside className='w-[25%] flex flex-col gap-2 fixed
-    right-0 h-screen bg-white z-10 py-3 px-2 overflow-scroll
-    pb-[50px]'>
+    right-0 h-screen bg-white z-10 py-3 px-2 overflow-hidden hover:overflow-scroll
+    pb-[50px] '>
       <div>
         <h3 className='font-bold text-[20px]'>Sinh nhật</h3>
         <div className='flex gap-1 mt-3'>

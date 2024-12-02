@@ -15,11 +15,11 @@ title: 'Friends',
 icon: IoMdSettings,    
 linkSidebar: [
     {icon: FaUserFriends, name: 'Trang chủ'},
-    {icon: IoIosPersonAdd, name: 'Lời mời kết bạn'},
-    {icon: IoPersonAddSharp, name: 'Gợi ý kết bạn'},
-    {icon: MdCopyAll, name: 'tất cả bạn bè'},
+    {icon: IoIosPersonAdd, name: 'Lời mời kết bạn', path: 'request'},
+    {icon: IoPersonAddSharp, name: 'Gợi ý kết bạn', path: 'suggestions'},
+    {icon: MdCopyAll, name: 'tất cả bạn bè', path: 'allfriend'},
     {icon: FaGift, name: 'Sinh nhật'},
-    {icon: SlOptionsVertical, name: 'Danh sách tùy chỉnh'}
+    {icon: SlOptionsVertical, name: 'Danh sách tùy chỉnh', path: 'friendCustom'}
 ]}
 
 export const videosOption = {
@@ -29,7 +29,7 @@ export const videosOption = {
     linkSidebar: [
         {icon: MdOndemandVideo, name: 'Trang chủ'},
         {icon: FaVideo , name: 'Trực tiếp'},
-        {icon: GoVideo , name: 'Reels'},
+        {icon: GoVideo , name: 'Reels', path: '/reel'},
         {icon: TfiVideoClapper, name: 'Chương trình'},
         {icon: BsRocketTakeoffFill, name: 'Khám trình'},
         {icon: IoSaveSharp , name: 'Video đã lưu'}

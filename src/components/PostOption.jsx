@@ -18,8 +18,7 @@ const PostOption = ({post, hiddenText}) => {
             <AiFillLike size={20} />
             <span className={hiddenText && 'hidden'}>Thích</span>
           </div>
-          <div className={btncss}
-          onClick={() => setShowPostMore(true)}>
+          <div className={btncss}>
             <RiMessage3Line size={20} />
             <span className={hiddenText && 'hidden'}>Bình luận</span>
           </div>

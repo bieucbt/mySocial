@@ -61,6 +61,12 @@ import show9 from './img/show/show9.jpg'
 import show10 from './img/show/show10.jpg'
 import watchListEmpty from './img/show/watchlistEmpty.png'
 import notification from './img/show/notification.webp'
+import people from './img/show/people.png'
+import videogame1 from './videoGame/video1.mp4'
+import videogame2 from './videoGame/video2.mp4'
+import videogame3 from './videoGame/video3.mp4'
+import videogame4 from './videoGame/video4.mp4'
+import videogame5 from './videoGame/video5.mp4'
 
 
 export {
@@ -84,5 +90,9 @@ export {
 
 export {
     show1, show10, show2, show3, show4, show5, show6,show7, show8, show9,
-    watchListEmpty, notification
+    watchListEmpty, notification, people
+}
+
+export{
+    videogame1, videogame2, videogame3, videogame4, videogame5
 }

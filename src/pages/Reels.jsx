@@ -44,7 +44,7 @@ const Reels = () => {
             <IoIosArrowForward size={30}  />
           </div>
         </div>
-        <div className='flex flex-col gap-2 absolute bottom-[80px] right-[-80px] 
+        <div className='flex flex-col gap-2 absolute bottom-[10px] right-[0px] 
         text-gray-500'>
           <div className='flex flex-col items-center'>
             <div className='w-10 h-10 rounded-full bg-[#ffffff1a] grid place-items-center

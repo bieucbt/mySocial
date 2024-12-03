@@ -12,9 +12,9 @@ const NavHeader = () => {
     <nav className="flex-[2] grid grid-cols-5 ml-[25%]">
         {
             navLinks.map((item, i) => {
-            const active = item.href == link
-            console.log('href: '+ item.href)
-            console.log('link: '+ item.href.includes(link.replace('/mySocial', '')))
+            const newLink = link.replace('/mySocial', '')
+            
+            const active = item.href == link 
             return <div key={i} className={`${ active  && `border-b-4
             border-blue-500`}`}
             title={item.title}>

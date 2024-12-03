@@ -8,7 +8,7 @@ const FriendSuggestion = ({data, setProfile, isFriend}) => {
     <div className='flex items-center gap-2 mt-3 hover:bg-gray-100
     rounded-xl p-1 cursor-pointer'
     onClick={() => setProfile(data)}>
-      <Avatar link={data.img} className='w-[60px] h-[60px]' />
+      <Avatar link={data.img} className='w-[60px] h-[60px] shrink-0' />
       <div className={isFriend && 'flex items-center justify-between flex-1'}>
         <h4 className='text-[14px]'>{data.name}</h4>
         { !isFriend &&

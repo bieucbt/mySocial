@@ -1,6 +1,6 @@
 import React from 'react'
-import { postGroups } from '../data/post';
-import Post from './../components/Post';
+import { postGroups } from '../../data/post';
+import Post from '../Post';
 
 const GroupPage1 = () => {
   return (

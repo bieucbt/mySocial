@@ -1,0 +1,33 @@
+import { avatar1, avatar10, avatar11, avatar4, avatar6, avatar8, avatar9, car1, car2, 
+  car3, 
+  car4, car6, car9, game1, 
+  game10, 
+  game2,
+  game3,
+  game5,
+  game6,
+  game9} from "../assets";
+
+
+export const groupSuggest = [
+  { img: game1, name: 'HIỆP HỘI CƠ KHÍ VIỆT NAM', member: 200, post: 25 },
+  { img: car1, name: 'Câu Lạc Bộ Lập Trình', member: 150, post: 20 },
+  { img: avatar1, name: 'Hội Thảo Frontend Developers', member: 300, post: 35 },
+  { img: game2, name: 'Thiết Kế Đồ Họa Việt Nam', member: 180, post: 15 },
+  { img: game5, name: 'Nhóm Chia Sẻ Kiến Thức IT', member: 500, post: 50 },
+  { img: car2, name: 'Diễn Đàn Công Nghệ', member: 400, post: 45 },
+  { img: car3, name: 'Hội Những Người Yêu Python', member: 250, post: 30 },
+  { img: avatar9, name: 'Node.js Community Vietnam', member: 600, post: 70 },
+  { img: avatar6, name: 'JavaScript Lovers', member: 700, post: 80 },
+  { img: game10, name: 'ReactJS Việt Nam', member: 550, post: 60 },
+  { img: game1, name: 'Backend Developers Group', member: 350, post: 40 },
+  { img: car4, name: 'Thiết Kế Website Chuyên Nghiệp', member: 480, post: 55 },
+  { img: game3, name: 'Hội Những Người Yêu AI', member: 900, post: 100 },
+  { img: car9, name: 'Cộng Đồng Data Science', member: 600, post: 85 },
+  { img: game5, name: 'Blockchain Enthusiasts', member: 450, post: 35 },
+  { img: game6, name: 'Startup Việt Nam', member: 800, post: 90 },
+  { img: avatar4, name: 'Thiết Kế 3D', member: 300, post: 25 },
+  { img: car6, name: 'Học Lập Trình Dành Cho Người Mới', member: 650, post: 75 },
+  { img: game9, name: 'Cộng Đồng Laravel Việt Nam', member: 400, post: 50 },
+  { img: avatar8, name: 'Hội UI/UX Designers', member: 720, post: 95 },
+];

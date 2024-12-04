@@ -28,25 +28,14 @@ body {
   }
 }
 
-::-webkit-scrollbar {
-  /* width: 0; */
+/* video page 2 animation livestream */
+
+.livestream {
+  animation: livestream 1s linear infinite alternate;
 }
-::-webkit-scrollbar-button {
-  /* 2 */
-}
-::-webkit-scrollbar-track {
-  /* 3 */
-}
-::-webkit-scrollbar-track-piece {
-  /* 4 */
-}
-::-webkit-scrollbar-thumb {
-  width: 1px;
-  height: 5px;
-}
-::-webkit-scrollbar-corner {
-  /* 6 */
-}
-::-webkit-resizer {
-  /* 7 */
+
+@keyframes livestream {
+  to {
+    opacity: 0.6;
+  }
 }

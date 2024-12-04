@@ -15,7 +15,8 @@ const VideoShow = ({show}) => {
         onMouseEnter={() => setSubShow(true)}
         onMouseOut={() => setSubShow(false)}>
           <img src={show.img} alt="show"
-          className='hover:scale-110 duration-500 ease-linear' />
+          className='hover:scale-110 duration-500 ease-linear
+          w-full h-full' />
         </div>
         {
           subShow && <div className={`absolute ${positionSubShow ? 'bottom-full' : 'top-full'} 

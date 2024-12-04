@@ -21,7 +21,7 @@ function App() {
         <Header />
         <main >
           <Routes>
-            <Route path='/mySocial' element={<Home />} />
+            <Route path='/mySocial/' element={<Home />} />
             <Route path='mySocial/friends' element={<Friends />} />  
             <Route path='mySocial/friends/request' element={<Requests />} />
             <Route path='mySocial/friends/suggestions' element={<SuggestionsPage />} />

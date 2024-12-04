@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Sidebar from '../components/Sidebar'
 import { friendsOption } from '../data/option'
@@ -18,6 +18,10 @@ const Friends = () => {
     <FriendPage5 />,
     <FriendPage6 />,
   ];
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  //   return () => null
+  // }, []);
   return (
     <div>
       <Sidebar data={friendsOption} setCurrentPage={setCurrentPage} 

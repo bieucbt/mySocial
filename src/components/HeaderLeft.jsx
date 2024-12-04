@@ -3,6 +3,7 @@ import { FaFacebook, FaSearch, FaArrowLeft
 } from "react-icons/fa";
 import ListSearch from "./ListSearch";
 import { useNavigate } from "react-router-dom";
+import { navLinks } from './../data/linkHeader';
 
 const HeaderLeft = () => {
   const [hidden, setHidden] = useState(false)
@@ -12,6 +13,7 @@ const HeaderLeft = () => {
   useEffect(()=>{
     const handleClickOutside = (e) => {
       if (inputRef.current && inputRef.current.contains(e.target) && hidden != false) {
+        console.log('show')
         setHidden(true)
       }else{
         setHidden(false);
@@ -34,7 +36,7 @@ const HeaderLeft = () => {
             onClick={() => setHidden(false)}><FaArrowLeft size={15} color="black"
             className="w-full animationArrowMove" /></div> :  
             <FaFacebook size={40} color="black" className="cursor-pointer" 
-            onClick={() => navigate('/mySocial')}/>
+            onClick={() => navigate(navLinks[0].href)}/>
           }
         </div>
         <div className="relative border border-solid w-[200px] rounded-[30px] 
@@ -44,7 +46,8 @@ const HeaderLeft = () => {
           <input type="text" placeholder="Tìm kiếm trên Facebook"
           className={`${hidden ? ' pl-[10px]' : ' pl-[40px]'} w-full h-[40px]
           outline-none pr-[10px] flex-1 duration-500 ease-linear`}
-          onFocus={()=>setHidden(true)} 
+          onClick={()=>{
+            setHidden(true)}} 
           />
         </div>
       </div>

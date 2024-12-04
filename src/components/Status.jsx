@@ -8,7 +8,7 @@ const Status = () => {
           cursor-pointer rounded-xl duration-500 ease-linear transition-all`
     const [showPost, setShowPost] = useState(false)
   return (
-    <div className='py-2 px-5 mt-4 bg-white'>
+    <div className='py-2 px-5 mt-4 bg-white rounded-xl'>
         <CreatPost showPost={showPost} setShowPost={setShowPost}  />
         <div className='flex items-center'>
           <img src={userInfo.avatar} alt="avatar user"

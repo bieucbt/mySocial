@@ -11,9 +11,14 @@ import SuggestionsPage from './pages/SuggestionsPage'
 import AllFriends from './pages/AllFriends'
 import FriendCustomList from './pages/FriendCustomList';
 import Reels from './pages/Reels'
+import { useEffect } from 'react'
 
 
 function App() {
+  useEffect(() => {
+    const windowLoad = window.addEventListener('load', () => alert('Ứng dụng đang trong giai đoạn phát triển.'))
+    return () => window.removeEventListener('load', windowLoad)
+  },[])
   
   return (
     <Router>

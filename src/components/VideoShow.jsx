@@ -5,9 +5,12 @@ const VideoShow = ({show}) => {
   const [positionSubShow, setPositionSubShow] = useState(false)
   const showRef = useRef(null)
   useEffect(() => {
-    const show = showRef.current
-    const showRect = show.getBoundingClientRect()
-    if(showRect.top > 500 ) setPositionSubShow(true)
+    if(showRef.current){
+      const show = showRef.current
+      const showRect = show.getBoundingClientRect()
+      if(showRect.top > 130 ) setPositionSubShow(true) 
+      console.log(showRect.top)
+    }
   },[])
   return (
     <div ref={showRef} className='relative'>

@@ -3,7 +3,7 @@ import Developer from '../Developer'
 
 const ProfilePage3 = () => {
   return (
-    <div>profile3
+    <div>
       <Developer /></div>
   )
 }

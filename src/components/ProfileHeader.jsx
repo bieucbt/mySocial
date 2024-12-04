@@ -7,7 +7,11 @@ import ProfileHeaderNav from './ProfileHeaderNav';
 const ProfileHeader = ({data}) => {
   return (
     <div className='bg-white max-w-[90%] mx-auto'>
-      <div className='w-full bg-gray-300 pt-[330px] cursor-pointer'></div>
+      <div className='w-full bg-gray-300 pt-[330px]  relative'>
+        <div className='flex items-center px-3 py-2 gap-2 bg-white w-max
+        absolute right-4 bottom-4 rounded-md cursor-pointer hover:bg-gray-100'>
+          <FaCamera /> <span>Thêm ảnh bìa</span></div>
+      </div>
       <div className='flex items-end justify-center gap-5 pb-4 px-8'>
         <div className='relative w-[168px] h-[120px] shrink-0'>
           <div className='relative'>

@@ -24,3 +24,15 @@ export const profileNav = [
     ]
   }
 ]
+
+
+
+export const introduce = [
+  'Tổng quan'
+  ,'Công việc và học vấn'
+  ,'Nơi từng sống'
+  ,'Thông tin liên hệ và cơ bản'
+  ,'Gia đình và các mối quan hệ'
+  ,'Chi tiết về bạn'
+  ,'Sự kiện trong đời'
+]

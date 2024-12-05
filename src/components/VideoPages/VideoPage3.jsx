@@ -1,9 +1,8 @@
 import React from 'react'
-import Developer from '../Developer'
 
 const VideoPage3 = () => {
   return (
-    <div><Developer /></div>
+    <div></div>
   )
 }
 

@@ -3,7 +3,6 @@ import Sidebar from '../components/Sidebar';
 import { videosOption } from '../data/option';
 import VideoPage1 from './../components/VideoPages/VideoPage1';
 import VideoPage2 from './../components/VideoPages/VideoPage2';
-import VideoPage3 from './../components/VideoPages/VideoPage3';
 import VideoPage4 from './../components/VideoPages/VideoPage4';
 import VideoPage5 from './../components/VideoPages/VideoPage5';
 import VideoPage6 from './../components/VideoPages/VideoPage6';
@@ -14,7 +13,7 @@ const Video = () => {
   const pages = [
     <VideoPage1 />,
     <VideoPage2 />,
-    <VideoPage3 />,
+    <></>,
     <VideoPage4 />,
     <VideoPage5 />,
     <VideoPage6 />,

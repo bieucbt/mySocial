@@ -8,8 +8,7 @@ const VideoShow = ({show}) => {
     if(showRef.current){
       const show = showRef.current
       const showRect = show.getBoundingClientRect()
-      if(showRect.top > 130 ) setPositionSubShow(true) 
-      console.log(showRect.top)
+      if(showRect.top > 130 ) setPositionSubShow(true)
     }
   },[])
   return (

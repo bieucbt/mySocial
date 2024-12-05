@@ -1,5 +1,4 @@
 import React from 'react'
-import Developer from '../Developer'
 
 const ProfilePage6 = () => {
   return (

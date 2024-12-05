@@ -1,5 +1,4 @@
 import React from 'react'
-import Developer from '../Developer'
 import { IoIosMore } from 'react-icons/io'
 
 const ProfilePage4 = () => {

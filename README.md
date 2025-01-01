@@ -1,8 +1,5 @@
-# React + Vite
+Thiết kế giao diện: Dự án được thiết kế với giao diện tương tự các trang mạng xã hội phổ biến như Facebook, tập trung vào trải nghiệm người dùng thân thiện và dễ sử dụng.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Định tuyến trang: Sử dụng React Router DOM để quản lý định tuyến và chuyển trang một cách mượt mà giữa các màn hình như Trang chủ, Bạn bè, Video, Nhóm, Game và Trang cá nhân.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Quản lý state: Áp dụng React State để quản lý các biến và trạng thái của ứng dụng, đảm bảo dữ liệu được cập nhật và hiển thị chính xác trên giao diện người dùng.

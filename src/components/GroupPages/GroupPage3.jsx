@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { groupSuggest } from '../../data/groupSuggestData';
 import GroupFlowing from '../GroupFlowing';
 
 const GroupPage3 = () => {
+
+  useEffect(() => {
+    scrollTo({ top: 0 })
+  }, [])
   return (
     <div className=''>
       <div className='flex items-center justify-between pt-5'>

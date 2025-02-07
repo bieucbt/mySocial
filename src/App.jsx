@@ -15,11 +15,7 @@ import { useEffect } from 'react'
 
 
 function App() {
-  useEffect(() => {
-    const windowLoad = window.addEventListener('load', () => alert('Ứng dụng đang trong giai đoạn phát triển.'))
-    return () => window.removeEventListener('load', windowLoad)
-  },[])
-  
+
   return (
     <Router>
       <div >
@@ -27,7 +23,7 @@ function App() {
         <main >
           <Routes>
             <Route path='/mySocial/' element={<Home />} />
-            <Route path='mySocial/friends' element={<Friends />} />  
+            <Route path='mySocial/friends' element={<Friends />} />
             <Route path='mySocial/friends/request' element={<Requests />} />
             <Route path='mySocial/friends/suggestions' element={<SuggestionsPage />} />
             <Route path='mySocial/friends/allfriend' element={<AllFriends />} />

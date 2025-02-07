@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from './../components/Sidebar';
 import { GamesOption } from '../data/option';
 import GamePage1 from './../components/Gamepages/GamePage1';
@@ -10,10 +10,11 @@ const Games = () => {
     <GamePage1 />,
     <GamePage2 />
   ]
+
   return (
     <div className='pb-9'>
-      <Sidebar data={GamesOption} setCurrentPage={setCurrentPage} 
-      currentPage={currentPage}/>
+      <Sidebar data={GamesOption} setCurrentPage={setCurrentPage}
+        currentPage={currentPage} />
       <div className='ml-[30%] w-[70%] px-5'>
         {
           pages[currentPage]

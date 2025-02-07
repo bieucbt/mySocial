@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { memo, useEffect } from 'react'
 import Suggestion from '../Suggestion'
 import { dataFriends } from '../../data/user'
 
 const FriendPage1 = () => {
+  useEffect(() => {
+    scrollTo({ top: 0 })
+  }, [])
   return (
     <div>
       <div className='flex items-center justify-between
@@ -19,4 +22,4 @@ const FriendPage1 = () => {
   )
 }
 
-export default FriendPage1
+export default memo(FriendPage1)

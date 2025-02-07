@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from './../components/Sidebar';
 import { GroupsOption } from '../data/option';
 import GroupPage1 from './../components/GroupPages/GroupPage1';
@@ -12,10 +12,11 @@ const Group = () => {
     <GroupPage2 />,
     <GroupPage3 />
   ]
+
   return (
     <div className=''>
-      <Sidebar data={GroupsOption} setCurrentPage={setCurrentPage} 
-      currentPage={currentPage} />
+      <Sidebar data={GroupsOption} setCurrentPage={setCurrentPage}
+        currentPage={currentPage} />
       <div className='ml-[30%] w-[70%] px-[5%]'>
         {
           pages[currentPage]

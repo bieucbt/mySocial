@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import GroupSuggestion from '../GroupSuggestion'
 import { groupSuggest } from '../../data/groupSuggestData'
 
 const GroupPage2 = () => {
+  useEffect(() => {
+    scrollTo({ top: 0 })
+  }, [])
   return (
     <div>
       <div className='pt-7'>

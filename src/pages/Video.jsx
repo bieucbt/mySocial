@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Sidebar from '../components/Sidebar';
 import { videosOption } from '../data/option';
 import VideoPage1 from './../components/VideoPages/VideoPage1';
@@ -20,10 +20,10 @@ const Video = () => {
   ]
   return (
     <div className='flex'>
-      <Sidebar data={videosOption} currentPage={currentPage} 
-      setCurrentPage={setCurrentPage} />
+      <Sidebar data={videosOption} currentPage={currentPage}
+        setCurrentPage={setCurrentPage} />
       <div className='flex-1 ml-[30%] px-[5%]'>
-        {pages[currentPage]} 
+        {pages[currentPage]}
       </div>
     </div>
   )
